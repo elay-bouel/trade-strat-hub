@@ -142,7 +142,7 @@ const allStrategies = [
 
 const Marketplace = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedRisk, setSelectedRisk] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState([0, 50]);
   const [performanceMin, setPerformanceMin] = useState(0);
@@ -156,7 +156,7 @@ const Marketplace = () => {
     }
     
     // Category filter
-    if (selectedCategory && strategy.category !== selectedCategory) {
+    if (selectedCategory !== "all" && strategy.category !== selectedCategory) {
       return false;
     }
     
@@ -216,7 +216,7 @@ const Marketplace = () => {
               <SelectValue placeholder="Category" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               <SelectItem value="Forex">Forex</SelectItem>
               <SelectItem value="Crypto">Crypto</SelectItem>
               <SelectItem value="Stocks">Stocks</SelectItem>
@@ -390,7 +390,7 @@ const Marketplace = () => {
                   variant="link" 
                   onClick={() => {
                     setSearchTerm("");
-                    setSelectedCategory("");
+                    setSelectedCategory("all");
                     setSelectedRisk([]);
                     setPriceRange([0, 50]);
                     setPerformanceMin(0);
