@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for the trading platform
+				navy: {
+					DEFAULT: '#1A2B4C',
+					light: '#2D4263',
+					dark: '#11203A'
+				},
+				teal: {
+					DEFAULT: '#4CAF93',
+					light: '#65C9AB',
+					dark: '#3A8B73'
+				},
+				coral: {
+					DEFAULT: '#FF6B6B',
+					light: '#FF8585',
+					dark: '#E65555'
+				},
+				profit: '#4CAF93',
+				loss: '#FF6B6B',
+				neutral: '#9E9E9E',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +104,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.85' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-subtle': 'pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},
