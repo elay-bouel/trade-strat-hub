@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -77,10 +78,10 @@
   }
 
   .text-navy {
-    @apply text-navy;
+    color: #1A2B4C;
   }
   .text-teal {
-    @apply text-teal;
+    color: #4CAF93;
   }
   .text-gradient {
     @apply bg-gradient-to-r from-navy to-teal bg-clip-text text-transparent;
