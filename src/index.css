@@ -6,26 +6,36 @@
 
 @layer base {
   :root {
-    --background: 215 50% 23%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
     --card: 0 0% 100%;
     --card-foreground: 215 25% 27%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
+
     --primary: 215 50% 23%;
     --primary-foreground: 210 40% 98%;
+
     --secondary: 158 38% 49%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 215 16% 94%;
     --muted-foreground: 215 16% 47%;
+
     --accent: 215 16% 92%;
     --accent-foreground: 215 25% 27%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 215 50% 23%;
+
     --radius: 0.5rem;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -39,23 +49,32 @@
   .dark {
     --background: 215 50% 10%;
     --foreground: 210 40% 98%;
+
     --card: 215 50% 15%;
     --card-foreground: 210 40% 98%;
+
     --popover: 215 50% 15%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 215 50% 23%;
     --primary-foreground: 210 40% 98%;
+
     --secondary: 158 38% 49%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 215 25% 27%;
     --muted-foreground: 215 16% 65%;
+
     --accent: 215 25% 27%;
     --accent-foreground: 210 40% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 215 25% 27%;
     --input: 215 25% 27%;
     --ring: 158 38% 49%;
+    
     --sidebar-background: 215 50% 15%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 158 38% 49%;
@@ -73,18 +92,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans text-base leading-relaxed;
+    @apply bg-background text-foreground font-sans;
     font-family: 'Inter', sans-serif;
-  }
-
-  .text-navy {
-    color: #1A2B4C;
-  }
-  .text-teal {
-    color: #4CAF93;
-  }
-  .text-gradient {
-    @apply bg-gradient-to-r from-navy to-teal bg-clip-text text-transparent;
   }
 }
 
@@ -111,12 +120,5 @@
   
   .badge-neutral {
     @apply bg-neutral/10 text-neutral text-xs px-2 py-0.5 rounded-full font-medium;
-  }
-
-  .btn-navy {
-    @apply bg-navy text-white hover:bg-navy-dark;
-  }
-  .btn-teal {
-    @apply bg-teal text-white hover:bg-teal-dark;
   }
 }
